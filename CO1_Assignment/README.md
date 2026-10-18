@@ -30,7 +30,12 @@ CO1_Assignment/
     |-- CO1_Assignment_Report.md
     |-- Reference/
     |-- Screenshots/Output/
+    |   |-- unit_test_results.png
+    |   `-- search_time_graph.png
     `-- Screenshots/Source_Code/
+        |-- search_algorithms.png
+        |-- test_search_algorithms.png
+        `-- run_benchmark.png
 ```
 
 ## Run and test
@@ -47,7 +52,8 @@ generates synthetic identifiers at the four required sizes, validates all
 queries, and reports preprocessing separately from search time. It uses only
 the Python standard library.
 
-Screenshot directories are intentionally not populated with simulated
-screenshots. Add genuine application-output and source-editor screenshots
-there if required by the instructor. See the consolidated report for results,
-limitations, and final manual-verification notes.
+Screenshot folders contain browser captures of the actual Python source files,
+the real unit-test output, and the generated performance graph. The code
+screenshots are source-file views rather than editor-window captures. See the
+consolidated report for results, limitations, and final manual-verification
+notes.

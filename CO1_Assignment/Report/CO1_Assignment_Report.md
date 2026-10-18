@@ -69,6 +69,25 @@ Intermediate measurements are not perfectly monotonic because short timing
 samples are affected by the interpreter, cache, and host load; the theoretical
 analysis predicts growth classes, not exact milliseconds.
 
+## Source and output screenshots
+
+The Python code is included as editable files:
+[search implementations](../Task_08_Implementation/search_algorithms.py),
+[unit tests](../Task_08_Implementation/test_search_algorithms.py), and
+[benchmark program](../Task_08_Implementation/run_benchmark.py). The following
+are genuine browser captures of those source files and the recorded local
+output (the code screenshots are file views, not editor-window captures).
+
+![Search algorithm source screenshot](Screenshots/Source_Code/search_algorithms.png)
+
+![Unit-test source screenshot](Screenshots/Source_Code/test_search_algorithms.png)
+
+![Benchmark source screenshot](Screenshots/Source_Code/run_benchmark.png)
+
+![Unit test run screenshot](Screenshots/Output/unit_test_results.png)
+
+![Generated performance graph screenshot](Screenshots/Output/search_time_graph.png)
+
 ## Reproducibility and manual verification
 
 From the repository root, use Python 3.8 or newer:
@@ -79,9 +98,9 @@ python CO1_Assignment/Task_08_Implementation/run_benchmark.py
 ```
 
 The benchmark regenerates the CSV and SVG. No third-party dependencies are
-required. The output- and source-code-screenshot folders are present but
-intentionally contain instructions rather than fabricated images; capture
-genuine screenshots in the intended submission environment if required.
+required. The source and test-output screenshots are browser captures of the
+actual local files and test output; they are not screenshots from a particular
+IDE or a production environment.
 See the [output screenshot folder](Screenshots/Output/README.md) and
 [source-code screenshot folder](Screenshots/Source_Code/README.md).
 Before submission, manually verify the student's name/identifier, course

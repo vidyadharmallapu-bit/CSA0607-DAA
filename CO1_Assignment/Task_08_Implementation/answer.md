@@ -1,11 +1,13 @@
 # Task 8 — Implement and test
 
-The implementations are in [search_algorithms.py](search_algorithms.py):
-an iterative scan, recursive binary search, and dictionary lookup. The source
-returns the matching identifier or `None`; the same identifier can be
-associated with a full student-record payload in a real system. Binary search
-requires ascending input, while the other two strategies accept the shuffled
-input used by the experiment.
+The algorithms are implemented in [search_algorithms.py](search_algorithms.py):
+an iterative scan, recursive binary search, and dictionary lookup. The tests
+are in [test_search_algorithms.py](test_search_algorithms.py), and the
+reproducible experiment is in [run_benchmark.py](run_benchmark.py). The search
+functions return the matching identifier or `None`; the same identifier can
+be associated with a full student-record payload in a real system. Binary
+search requires ascending input, while the other two strategies accept the
+shuffled input used by the experiment.
 
 The standard-library unit tests cover hits, misses, an empty input, and a
 single-record input for each algorithm. Run them from the repository root:
@@ -21,3 +23,7 @@ result before timing, and records the median of five rounds. Sorting and
 index-building are timed separately from lookup. Generation and correctness
 checks are excluded from lookup timings. This is a reproducible synthetic
 experiment, not a claim about production student data.
+
+Source-file and real test-output screenshots are available in the report's
+[source-code screenshots](../Report/Screenshots/Source_Code/README.md) and
+[output screenshots](../Report/Screenshots/Output/README.md) folders.

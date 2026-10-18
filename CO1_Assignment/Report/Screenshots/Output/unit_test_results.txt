@@ -1,0 +1,9 @@
+test_finds_existing_records (test_search_algorithms.SearchAlgorithmTests.test_finds_existing_records) ... ok
+test_handles_empty_input (test_search_algorithms.SearchAlgorithmTests.test_handles_empty_input) ... ok
+test_handles_single_record (test_search_algorithms.SearchAlgorithmTests.test_handles_single_record) ... ok
+test_returns_none_for_missing_record (test_search_algorithms.SearchAlgorithmTests.test_returns_none_for_missing_record) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK
