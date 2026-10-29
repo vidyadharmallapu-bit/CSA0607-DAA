@@ -1,0 +1,4 @@
+case,description,text_length,pattern_length,matches_zero_based,character_comparisons,prediction,correct,environment
+easy_early,Short pattern occurs near the beginning.,17,5,3,18,early match uses few comparisons,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+repetitive_worst_style,Repeated A prefixes force a long failed comparison at many shifts.,80,21,,1260,repetitive near-match has high work; overlaps are reported,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+overlapping_multiple,Multiple overlapping occurrences are present.,8,3,0;2;5,13,repetitive near-match has high work; overlaps are reported,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39

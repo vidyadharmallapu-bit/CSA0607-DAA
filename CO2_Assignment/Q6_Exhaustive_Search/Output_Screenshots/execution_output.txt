@@ -1,0 +1,8 @@
+Q6 EXHAUSTIVE KNAPSACK EXPERIMENT
+Environment: Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+Prediction: each added package doubles the examined subset count. The local response budget is 2.0 seconds for an exhaustive solve.
+n=10 capacity=  40 expected_subsets=    1024 actual=    1024 feasible=     145 best= 414 weight=  40 seconds=0.002058 within_budget=True correct=True
+n=15 capacity=  85 expected_subsets=   32768 actual=   32768 feasible=    3238 best= 514 weight=  82 seconds=0.053266 within_budget=True correct=True
+n=18 capacity= 112 expected_subsets=  262144 actual=  262144 feasible=   16764 best= 518 weight= 112 seconds=0.697467 within_budget=True correct=True
+n=19 capacity= 113 expected_subsets=  524288 actual=  524288 feasible=   37107 best= 512 weight= 111 seconds=1.022484 within_budget=True correct=True
+n=20 capacity= 133 expected_subsets= 1048576 actual= 1048576 feasible=   66440 best= 658 weight= 129 seconds=2.240330 within_budget=False correct=True

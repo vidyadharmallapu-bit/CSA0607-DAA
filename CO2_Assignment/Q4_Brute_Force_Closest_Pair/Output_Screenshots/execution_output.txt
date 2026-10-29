@@ -1,0 +1,9 @@
+Q4 BRUTE-FORCE CLOSEST-PAIR EXPERIMENT
+Environment: Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+Acceptance criterion set before measurement: one closest-pair run should finish within 1.0 second on this environment; this is a local threshold, not a hardware-independent limit.
+n= 10 expected_pairs=     45 actual_pairs=     45 distance_calcs=     45 seconds=0.000033 accepted=True correct=True
+n=100 expected_pairs=   4950 actual_pairs=   4950 distance_calcs=   4950 seconds=0.000807 accepted=True correct=True
+n=500 expected_pairs= 124750 actual_pairs= 124750 distance_calcs= 124750 seconds=0.018981 accepted=True correct=True
+n=1500 expected_pairs=1124250 actual_pairs=1124250 distance_calcs=1124250 seconds=0.173949 accepted=True correct=True
+n=3000 expected_pairs=4498500 actual_pairs=4498500 distance_calcs=4498500 seconds=0.684974 accepted=True correct=True
+n=5000 expected_pairs=12497500 actual_pairs=12497500 distance_calcs=12497500 seconds=1.852081 accepted=False correct=True

@@ -1,0 +1,12 @@
+Q1 SORTING EXPERIMENT
+Environment: Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+Prediction: insertion sort should benefit most from nearly sorted input; selection sort comparisons stay fixed for a given n; early-exit bubble sort should stop quickly on ordered input.
+reverse_sorted   selection          n=40 comparisons= 780 movements=  60 swaps= 20 seconds=0.000067345 correct=True
+reverse_sorted   bubble_early_exit  n=40 comparisons= 780 movements=2340 swaps=780 seconds=0.000121336 correct=True
+reverse_sorted   insertion          n=40 comparisons= 780 movements= 819 swaps=  0 seconds=0.000071824 correct=True
+nearly_sorted    selection          n=40 comparisons= 780 movements=   9 swaps=  3 seconds=0.000039033 correct=True
+nearly_sorted    bubble_early_exit  n=40 comparisons= 219 movements=  45 swaps= 15 seconds=0.000012994 correct=True
+nearly_sorted    insertion          n=40 comparisons=  54 movements=  54 swaps=  0 seconds=0.000006753 correct=True
+empty            selection          n= 0 comparisons=   0 movements=   0 swaps=  0 seconds=0.000001292 correct=True
+empty            bubble_early_exit  n= 0 comparisons=   0 movements=   0 swaps=  0 seconds=0.000001202 correct=True
+empty            insertion          n= 0 comparisons=   0 movements=   0 swaps=  0 seconds=0.000001112 correct=True

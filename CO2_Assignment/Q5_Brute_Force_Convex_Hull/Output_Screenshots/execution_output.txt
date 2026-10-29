@@ -1,0 +1,5 @@
+Q5 BRUTE-FORCE CONVEX HULL EXPERIMENT
+Environment: Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+Prediction: supporting candidate lines identify the outer boundary; intermediate collinear points, duplicates, and interior points are excluded from polygon corners.
+case=boundary_and_interior input=7 unique=7 hull=[(0, 0), (4, 0), (4, 3), (0, 3)] pairs=21 orientation_tests=58 correct=True
+case=collinear_duplicates_symmetric input=11 unique=10 hull=[(0, 0), (4, 0), (4, 4), (0, 4)] pairs=45 orientation_tests=213 correct=True

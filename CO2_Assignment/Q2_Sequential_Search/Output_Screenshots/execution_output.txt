@@ -1,0 +1,11 @@
+Q2 SEQUENTIAL SEARCH EXPERIMENT
+Environment: Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+Prediction: a hit at zero-based position p takes p+1 comparisons; a miss takes n comparisons.
+n=  10 case=first  position=   0 found=True  comparisons=   1 correct=True
+n=  10 case=middle position=   5 found=True  comparisons=   6 correct=True
+n=  10 case=final  position=   9 found=True  comparisons=  10 correct=True
+n=  10 case=miss   position=None found=False comparisons=  10 correct=True
+n=1000 case=first  position=   0 found=True  comparisons=   1 correct=True
+n=1000 case=middle position= 500 found=True  comparisons= 501 correct=True
+n=1000 case=final  position= 999 found=True  comparisons=1000 correct=True
+n=1000 case=miss   position=None found=False comparisons=1000 correct=True

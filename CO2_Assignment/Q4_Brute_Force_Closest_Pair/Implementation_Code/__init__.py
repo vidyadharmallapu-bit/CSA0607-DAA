@@ -1,0 +1,1 @@
+"""Closest-pair implementation for Question 4."""

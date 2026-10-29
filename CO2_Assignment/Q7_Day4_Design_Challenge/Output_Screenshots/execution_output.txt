@@ -1,0 +1,5 @@
+Q7 EXHAUSTIVE VS BRANCH-AND-BOUND
+Environment: Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+Pre-implementation prediction: diverse value/weight ratios will let the fractional bound prune large subtrees; equal-ratio packages will weaken pruning, so visited nodes may approach exhaustive scale.
+case=diverse_ratios_effective_pruning n=20 subsets=1048576 BnB_nodes=71 complete_leaves=2 expanded=35 pruned=34 exhaustive_s=2.295861 BnB_pre_s=0.000020 BnB_search_s=0.000074 values_match=True
+case=equal_ratio_weak_pruning n=17 subsets=131072 BnB_nodes=136135 complete_leaves=35750 expanded=68067 pruned=32318 exhaustive_s=0.257754 BnB_pre_s=0.000013 BnB_search_s=0.142429 values_match=True

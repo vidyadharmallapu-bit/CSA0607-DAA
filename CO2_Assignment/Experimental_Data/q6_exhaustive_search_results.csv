@@ -1,0 +1,6 @@
+n_packages,seed,capacity,subsets_expected,subsets_examined,feasible_subsets,best_value,best_weight,elapsed_seconds,response_budget_seconds,within_budget,correct,environment
+10,6020,40,1024,1024,145,414,40,0.002058318,2.0,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+15,6025,85,32768,32768,3238,514,82,0.053266296,2.0,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+18,6028,112,262144,262144,16764,518,112,0.697467170,2.0,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+19,6029,113,524288,524288,37107,512,111,1.022484494,2.0,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+20,6030,133,1048576,1048576,66440,658,129,2.240329769,2.0,False,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39

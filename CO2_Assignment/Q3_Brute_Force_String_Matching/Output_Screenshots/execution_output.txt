@@ -1,0 +1,6 @@
+Q3 BRUTE-FORCE STRING MATCHING EXPERIMENT
+Environment: Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+Prediction: repetitive near-matches should require far more comparisons than a similarly sized easy match; overlapping hits are retained.
+case=easy_early n=17 m=5 matches=[3] comparisons=18 independently_validated=True
+case=repetitive_worst_style n=80 m=21 matches=[] comparisons=1260 independently_validated=True
+case=overlapping_multiple n=8 m=3 matches=[0, 2, 5] comparisons=13 independently_validated=True

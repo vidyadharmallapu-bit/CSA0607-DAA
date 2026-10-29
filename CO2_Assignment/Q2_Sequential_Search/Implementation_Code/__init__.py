@@ -1,0 +1,1 @@
+"""Sequential-search implementation for Question 2."""

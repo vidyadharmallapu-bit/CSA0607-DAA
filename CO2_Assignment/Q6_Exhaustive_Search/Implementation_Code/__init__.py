@@ -1,0 +1,1 @@
+"""Exhaustive knapsack implementation for Question 6."""
