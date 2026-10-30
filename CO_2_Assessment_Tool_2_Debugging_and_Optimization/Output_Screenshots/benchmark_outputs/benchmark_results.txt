@@ -1,0 +1,32 @@
+SENTINELOPS OPTIMIZATION BENCHMARKS
+Environment: Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+Operation counts and timings are recorded separately.
+sort nearly_sorted  n=  100 insertion   comparisons=       197 movements=       197 seconds=0.000035 stable=True
+sort nearly_sorted  n=  100 stable_merge comparisons=       375 movements=      1400 seconds=0.000250 stable=True
+sort random         n=  100 insertion   comparisons=      2632 movements=      2637 seconds=0.000416 stable=True
+sort random         n=  100 stable_merge comparisons=       562 movements=      1400 seconds=0.000235 stable=True
+sort reverse_sorted n=  100 insertion   comparisons=      4942 movements=      5005 seconds=0.000850 stable=True
+sort reverse_sorted n=  100 stable_merge comparisons=       334 movements=      1400 seconds=0.000215 stable=True
+sort nearly_sorted  n= 1000 insertion   comparisons=      1010 movements=      1010 seconds=0.000252 stable=True
+sort nearly_sorted  n= 1000 stable_merge comparisons=      5052 movements=     20000 seconds=0.003281 stable=True
+sort random         n= 1000 insertion   comparisons=    241765 movements=    241769 seconds=0.044767 stable=True
+sort random         n= 1000 stable_merge comparisons=      8736 movements=     20000 seconds=0.003659 stable=True
+sort reverse_sorted n= 1000 insertion   comparisons=    495309 movements=    495408 seconds=0.143309 stable=True
+sort reverse_sorted n= 1000 stable_merge comparisons=      5665 movements=     20000 seconds=0.005531 stable=True
+sort nearly_sorted  n= 5000 insertion   comparisons=      5000 movements=      5000 seconds=0.001090 stable=True
+sort nearly_sorted  n= 5000 stable_merge comparisons=     33356 movements=    130000 seconds=0.027423 stable=True
+sort random         n= 5000 insertion   comparisons=   6126799 movements=   6126804 seconds=0.836289 stable=True
+sort random         n= 5000 stable_merge comparisons=     56813 movements=    130000 seconds=0.013082 stable=True
+sort reverse_sorted n= 5000 insertion   comparisons=  12376956 movements=  12377055 seconds=1.898640 stable=True
+sort reverse_sorted n= 5000 stable_merge comparisons=     34593 movements=    130000 seconds=0.012017 stable=True
+search n=  100 queries=500 comparisons=    37884 sequential=0.001124s index_build=0.000013s set_queries=0.000038s correct=True
+search n= 1000 queries=500 comparisons=   380682 sequential=0.012014s index_build=0.000044s set_queries=0.000037s correct=True
+search n=10000 queries=500 comparisons=  3803143 sequential=0.121903s index_build=0.000744s set_queries=0.000049s correct=True
+string early_match            n= 4000 m=  9 comparisons=    4000 matches=    1 seconds=0.000423 correct=True
+string repetitive_near_match  n= 6000 m=100 comparisons=  590100 matches=    0 seconds=0.041432 correct=True
+string missing_pattern        n= 4000 m=  3 comparisons=    3998 matches=    0 seconds=0.000377 correct=True
+string overlapping_matches    n= 4000 m=  3 comparisons=    7996 matches= 1999 seconds=0.000705 correct=True
+closest n= 1000 theoretical=     499500 brute_dists=     499500 optimized_dists=     915 preprocessing_ops=    28058 brute=0.0953s optimized=0.0081s min=1.98328782 agreement=True
+closest n= 2000 theoretical=    1999000 brute_dists=    1999000 optimized_dists=    1854 preprocessing_ops=    62085 brute=0.3304s optimized=0.0250s min=8.79319007 agreement=True
+closest n= 4000 theoretical=    7998000 brute_dists=    7998000 optimized_dists=    3733 preprocessing_ops=   136132 brute=1.5982s optimized=0.0376s min=2.79085560 agreement=True
+closest n= 8000 theoretical=   31996000 brute_dists=   31996000 optimized_dists=    7417 preprocessing_ops=   296258 brute=5.5871s optimized=0.0816s min=2.86841940 agreement=True

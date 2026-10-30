@@ -1,0 +1,6 @@
+OPTIMIZED MODULE DEMONSTRATION
+stable insertion sort -> [('A2', 9), ('A4', 9), ('A3', 5), ('A1', 3), ('A5', 1)]; counts=OperationCounts(comparisons=7, movements=8)
+indexed blocklist queries -> [True, True, False]; counts=SearchCounts(index_build_operations=3, lookups=3)
+counted brute-force signatures -> [0, 8]; comparisons=18
+closest pair brute -> (0, 5), 1.414213562373 km, distances=15
+closest pair divide-and-conquer -> (0, 5), 1.414213562373 km, distances=6, preprocessing=27

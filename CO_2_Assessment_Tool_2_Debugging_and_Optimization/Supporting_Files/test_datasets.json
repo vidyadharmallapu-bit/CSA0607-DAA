@@ -1,0 +1,10 @@
+{
+  "alerts": [["A1", 3], ["A2", 9], ["A3", 5], ["A4", 9], ["A5", 1]],
+  "blocklist": ["10.0.0.5", "10.0.0.9", "172.16.4.2"],
+  "queries": ["10.0.0.9", "10.0.0.5", "8.8.8.8"],
+  "log": "FAILFAIXFAIL",
+  "pattern": "FAIL",
+  "events_km": [[2, 3], [12, 30], [40, 50], [5, 1], [12, 10], [3, 4]],
+  "benchmark_seeds": {"sorting": 8821, "blocklist": 8822, "strings": 8823, "closest_pair_base": 8830},
+  "benchmark_sizes": {"sorting": [100, 1000, 5000], "blocklist_entries": [100, 1000, 10000], "closest_pair_events": [1000, 2000, 4000, 8000]}
+}

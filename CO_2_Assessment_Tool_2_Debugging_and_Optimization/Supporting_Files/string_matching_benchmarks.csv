@@ -1,0 +1,5 @@
+case,text_length,pattern_length,character_comparisons,match_count,match_positions_sample,elapsed_seconds,correct,environment
+early_match,4000,9,4000,1,0,0.000423350,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+repetitive_near_match,6000,100,590100,0,,0.041431965,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+missing_pattern,4000,3,3998,0,,0.000376683,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+overlapping_matches,4000,3,7996,1999,0;2;4;6;8;10;12;14;16;18,0.000705406,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39

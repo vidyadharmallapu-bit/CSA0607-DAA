@@ -1,0 +1,4 @@
+blocklist_entries,query_count,hit_ratio,index_construction_seconds,sequential_comparisons,sequential_total_seconds,indexed_build_operations,indexed_lookup_count,indexed_query_seconds,indexed_total_seconds,correct,seed,environment
+100,500,0.5,0.000013055,37884,0.001123550,100,500,0.000037821,0.000050876,True,8922,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+1000,500,0.5,0.000044213,380682,0.012014415,1000,500,0.000036819,0.000081032,True,9822,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+10000,500,0.5,0.000744009,3803143,0.121902678,10000,500,0.000048590,0.000792599,True,18822,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39

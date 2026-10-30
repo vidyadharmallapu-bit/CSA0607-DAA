@@ -1,0 +1,15 @@
+test_brute_and_divide_conquer_closest_pair_agree (__main__.SentinelOpsTests.test_brute_and_divide_conquer_closest_pair_agree) ... ok
+test_closest_pair_duplicates_ties_negative_and_two_events (__main__.SentinelOpsTests.test_closest_pair_duplicates_ties_negative_and_two_events) ... ok
+test_closest_pair_rejects_small_inputs (__main__.SentinelOpsTests.test_closest_pair_rejects_small_inputs) ... ok
+test_corrected_closest_pair_supplied_and_known_answer (__main__.SentinelOpsTests.test_corrected_closest_pair_supplied_and_known_answer) ... ok
+test_optimized_sorts_match_corrected_and_are_stable (__main__.SentinelOpsTests.test_optimized_sorts_match_corrected_and_are_stable) ... ok
+test_optimized_string_comparison_counter (__main__.SentinelOpsTests.test_optimized_string_comparison_counter) ... ok
+test_original_faulty_behaviour_is_preserved (__main__.SentinelOpsTests.test_original_faulty_behaviour_is_preserved) ... ok
+test_sequential_search_boolean_convention_and_boundaries (__main__.SentinelOpsTests.test_sequential_search_boolean_convention_and_boundaries) ... ok
+test_sort_empty_single_sorted_reverse_and_stability (__main__.SentinelOpsTests.test_sort_empty_single_sorted_reverse_and_stability) ... ok
+test_string_matching_supplied_and_all_boundaries (__main__.SentinelOpsTests.test_string_matching_supplied_and_all_boundaries) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+OK

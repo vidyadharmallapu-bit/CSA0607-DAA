@@ -1,0 +1,34 @@
+CORRECTED PROGRAM OUTPUTS
+sort_alerts -> [('A2', 9), ('A4', 9), ('A3', 5), ('A1', 3), ('A5', 1)]
+is_blocked -> [('10.0.0.9', True), ('10.0.0.5', True), ('8.8.8.8', False)]
+find_signature('FAILFAIXFAIL', 'FAIL') -> [0, 8]
+closest_logins -> pair=(0, 5), distance_km=1.414213562373
+
+STABLE INSERTION SORT TRACE (descending severity)
+iteration=1 key=('A2', 9)
+  comparisons=["('A1', 3) vs key ('A2', 9)"]
+  shifts=["move ('A1', 3) from 0 to 1"]
+  insertion_position=0; array=[('A2', 9), ('A1', 3), ('A3', 5), ('A4', 9), ('A5', 1)]
+iteration=2 key=('A3', 5)
+  comparisons=["('A1', 3) vs key ('A3', 5)", "('A2', 9) vs key ('A3', 5)"]
+  shifts=["move ('A1', 3) from 1 to 2"]
+  insertion_position=1; array=[('A2', 9), ('A3', 5), ('A1', 3), ('A4', 9), ('A5', 1)]
+iteration=3 key=('A4', 9)
+  comparisons=["('A1', 3) vs key ('A4', 9)", "('A3', 5) vs key ('A4', 9)", "('A2', 9) vs key ('A4', 9)"]
+  shifts=["move ('A1', 3) from 2 to 3", "move ('A3', 5) from 1 to 2"]
+  insertion_position=1; array=[('A2', 9), ('A4', 9), ('A3', 5), ('A1', 3), ('A5', 1)]
+iteration=4 key=('A5', 1)
+  comparisons=["('A1', 3) vs key ('A5', 1)"]
+  shifts=['none']
+  insertion_position=4; array=[('A2', 9), ('A4', 9), ('A3', 5), ('A1', 3), ('A5', 1)]
+
+BRUTE-FORCE ALIGNMENT TRACE text='FAILFAIXFAIL' pattern='FAIL'
+start=0 comparisons=["text[0]='F' vs pattern[0]='F'", "text[1]='A' vs pattern[1]='A'", "text[2]='I' vs pattern[2]='I'", "text[3]='L' vs pattern[3]='L'"] mismatch_offset=None match=True
+start=1 comparisons=["text[1]='A' vs pattern[0]='F'"] mismatch_offset=0 match=False
+start=2 comparisons=["text[2]='I' vs pattern[0]='F'"] mismatch_offset=0 match=False
+start=3 comparisons=["text[3]='L' vs pattern[0]='F'"] mismatch_offset=0 match=False
+start=4 comparisons=["text[4]='F' vs pattern[0]='F'", "text[5]='A' vs pattern[1]='A'", "text[6]='I' vs pattern[2]='I'", "text[7]='X' vs pattern[3]='L'"] mismatch_offset=3 match=False
+start=5 comparisons=["text[5]='A' vs pattern[0]='F'"] mismatch_offset=0 match=False
+start=6 comparisons=["text[6]='I' vs pattern[0]='F'"] mismatch_offset=0 match=False
+start=7 comparisons=["text[7]='X' vs pattern[0]='F'"] mismatch_offset=0 match=False
+start=8 comparisons=["text[8]='F' vs pattern[0]='F'", "text[9]='A' vs pattern[1]='A'", "text[10]='I' vs pattern[2]='I'", "text[11]='L' vs pattern[3]='L'"] mismatch_offset=None match=True

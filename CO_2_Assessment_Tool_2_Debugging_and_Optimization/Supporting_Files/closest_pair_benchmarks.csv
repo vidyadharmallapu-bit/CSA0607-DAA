@@ -1,0 +1,5 @@
+event_count,seed,theoretical_unique_pairs,brute_candidate_pairs,brute_distance_calculations,brute_preprocessing_operations,brute_elapsed_seconds,optimized_candidate_pairs,optimized_distance_calculations,optimized_preprocessing_operations,optimized_elapsed_seconds,minimum_distance_km,distance_calculation_reduction_fraction,correct,environment
+1000,9830,499500,499500,499500,0,0.095256083,915,915,28058,0.008108986,1.983287817939,0.998168168,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+2000,10830,1999000,1999000,1999000,0,0.330356033,1854,1854,62085,0.024963155,8.793190069594,0.999072536,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+4000,12830,7998000,7998000,7998000,0,1.598185661,3733,3733,136132,0.037607256,2.790855598737,0.999533258,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+8000,16830,31996000,31996000,31996000,0,5.587078836,7417,7417,296258,0.081627552,2.868419403875,0.999768190,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39

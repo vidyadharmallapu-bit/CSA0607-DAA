@@ -1,0 +1,19 @@
+algorithm,dataset_type,input_size,seed,comparisons,element_movements,elapsed_seconds,correct,stability_preserved,environment
+insertion,nearly_sorted,100,8821,197,197,0.000035115,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+stable_merge,nearly_sorted,100,8821,375,1400,0.000250318,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+insertion,random,100,8821,2632,2637,0.000415696,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+stable_merge,random,100,8821,562,1400,0.000235470,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+insertion,reverse_sorted,100,8821,4942,5005,0.000850368,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+stable_merge,reverse_sorted,100,8821,334,1400,0.000214681,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+insertion,nearly_sorted,1000,8821,1010,1010,0.000252161,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+stable_merge,nearly_sorted,1000,8821,5052,20000,0.003280714,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+insertion,random,1000,8821,241765,241769,0.044766729,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+stable_merge,random,1000,8821,8736,20000,0.003658970,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+insertion,reverse_sorted,1000,8821,495309,495408,0.143309093,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+stable_merge,reverse_sorted,1000,8821,5665,20000,0.005531274,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+insertion,nearly_sorted,5000,8821,5000,5000,0.001090104,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+stable_merge,nearly_sorted,5000,8821,33356,130000,0.027422946,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+insertion,random,5000,8821,6126799,6126804,0.836288691,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+stable_merge,random,5000,8821,56813,130000,0.013081768,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+insertion,reverse_sorted,5000,8821,12376956,12377055,1.898640324,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+stable_merge,reverse_sorted,5000,8821,34593,130000,0.012016761,True,True,Python 3.14.2; Linux-6.8.0-1064-azure-x86_64-with-glibc2.39

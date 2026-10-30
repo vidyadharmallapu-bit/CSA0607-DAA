@@ -1,0 +1,25 @@
+# Defect Register
+
+## Observed supplied outputs
+
+The unmodified-logic source was executed before fixes. It printed sorted alerts as `[('A4', 9), ('A3', 5), ('A3', 5), ('A5', 1), ('A5', 1)]`; the A1 and A2 records were lost and A3/A5 duplicated. All three supplied `is_blocked` calls returned `False`. `find_signature('FAILFAIXFAIL', 'FAIL')` returned `[0, 4]`, where index 4 is not a match and the final true match at index 8 was never aligned. `closest_logins` returned indices `(0, 2)` at `60.440052945046 km`, the farthest pair in this dataset. `find_signature('abc', '')` raised `UnboundLocalError` because `j` was never assigned.
+
+## Nine primary entries
+
+| ID | Function / faulty fragment | Expected behavior | Actual behavior | Root cause | Corrective change | Verification and corrected output |
+|---|---|---|---|---|---|---|
+| D01 | `sort_alerts`: `while j > 0 ...` and `alerts[j] = key` | Scan index 0 and insert after the last shifted position; preserve all alerts and stable equal-severity order. | Supplied input becomes `[A4, A3, A3, A5, A5]`; A1/A2 lost. | The loop stops before index 0 and the held key is written at `j` rather than `j + 1`; these two index errors jointly break the insertion-step invariant. | Use `j >= 0` and write `alerts[j + 1] = key`. | Regression test and trace. Output: `[(A2,9),(A4,9),(A3,5),(A1,3),(A5,1)]`. |
+| D02 | `is_blocked`: `if blocklist[i] == ip: return False` | A listed address returns `True`. | Both supplied listed addresses return `False`. | The membership branch returns the negative result. | Return `True` on equality. | First/last-hit tests; `10.0.0.9 -> True`. |
+| D03 | `is_blocked`: `else: return False` inside loop | A missing address scans every entry then returns `False`. | The function exits after comparing only the first entry; later hits are reported absent. | The miss return is inside the loop, preventing subsequent comparisons. | Move `return False` after the loop. | Last-position and absent tests; `8.8.8.8 -> False` after full scan. |
+| D04 | `find_signature`: `range(n - m)` | Examine starts `0..n-m`, including the final valid alignment. | Supplied final occurrence at index 8 is not examined. | Python's upper bound is exclusive and no `+1` is used. | Use `range(n - m + 1)` after length checks. | End-match test; corrected result `[0, 8]`. |
+| D05 | `find_signature`: empty pattern enters loop and later reads `j` | Apply an explicit empty-pattern convention without touching an uninitialized variable. | `find_signature('abc','')` raises `UnboundLocalError`. | The inner loop does not execute for `m=0`, leaving `j` undefined. | Return all `n+1` boundaries for an empty pattern. | Empty/empty and nonempty-text empty-pattern tests; `([], '') -> [0]`, `('abc','') -> [0,1,2,3]`. |
+| D06 | `find_signature`: `if j == m - 1` | Accept only if every pattern character matched. | Alignment 4 is falsely accepted after its last character mismatches; supplied result contains false index 4. | `j` is the index of the last comparison even when that comparison broke on mismatch. | Track successful match using `j == m` after a bounded loop. | Supplied trace: index 4 mismatch at offset 3; corrected positions `[0,8]`. |
+| D07 | `closest_logins`: `min_dist = 0` | Start above every possible distance so the first valid pair initializes the minimum. | The first positive pair is retained as a candidate for a supposed minimum. | Zero is a lower bound, not an initial upper bound on the minimum. | Initialize squared best distance to infinity. | Supplied minimum pair `(0,5)`, `sqrt(2) km`. |
+| D08 | `closest_logins`: `if d > min_dist` | Replace the saved pair only when a smaller distance is found. | The routine maximizes distance and returns `(0,2)` at `60.440052945046 km`. | The comparison direction is reversed. | Compare squared distance using `<`; use index-pair tie-break on equality. | Independent exhaustive check and known-distance tests. |
+| D09 | `for i in range(n)` / `for j in range(n)` | Compare distinct events once, `j > i`. | Self-pairs and both orders of each pair are evaluated. | The inner loop begins at zero and includes all indices. | Use `i` through `n-2` and `j` from `i+1`. | Pair counter equals `n(n-1)/2`; no self-pair. |
+
+## Count interpretation
+
+The assessment's nine categories map to the nine rows above. D01 deliberately groups two faulty index expressions because both violate the single insertion-step placement invariant and jointly produce the observed corruption. Counting individual faulty expressions instead gives ten statement-level faults (the other eight rows each identify one primary faulty statement/category). This distinction is explicit rather than hiding or inventing a defect. The original source itself supports all nine requested categories.
+
+Input validation and empty/singleton closest-pair handling are missing from the original, but are documented boundary-condition omissions rather than additional primary defects in the nine-category register. Quadratic pair scanning and repeated sequential lookup are performance limitations, not correctness defects by themselves.
